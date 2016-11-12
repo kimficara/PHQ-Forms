@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<title>Patient Health Questionnaire (PHQ-9)</title>
+<title>Patient Health Questionnaire</title>
 
-<h1>Patient Health Questionnaire (PHQ-9)</h1>
+<h1>Patient Health Questionnaire</h1>
+<h2>PHQ-9</h2>
 
 <head>
 <style>
@@ -28,20 +29,37 @@ tr:nth-child(even) {
 <body>
 
 <script>
-function findScore() {
- var val1 = parseInt(document.querySelector('input[name = "Question 1"]:checked').value);
- var val2 = parseInt(document.querySelector('input[name = "Question 2"]:checked').value);
- var val3 = parseInt(document.querySelector('input[name = "Question 3"]:checked').value);
- var val4 = parseInt(document.querySelector('input[name = "Question 4"]:checked').value);
- var val5 = parseInt(document.querySelector('input[name = "Question 5"]:checked').value);
- var val6 = parseInt(document.querySelector('input[name = "Question 6"]:checked').value);
- var val7 = parseInt(document.querySelector('input[name = "Question 7"]:checked').value);
- var val8 = parseInt(document.querySelector('input[name = "Question 8"]:checked').value);
- var val9 = parseInt(document.querySelector('input[name = "Question 9"]:checked').value);
+function findScorePHQ9() {
+ var val1 = parseInt(document.querySelector('input[name = "Question 9.1"]:checked').value);
+ var val2 = parseInt(document.querySelector('input[name = "Question 9.2"]:checked').value);
+ var val3 = parseInt(document.querySelector('input[name = "Question 9.3"]:checked').value);
+ var val4 = parseInt(document.querySelector('input[name = "Question 9.4"]:checked').value);
+ var val5 = parseInt(document.querySelector('input[name = "Question 9.5"]:checked').value);
+ var val6 = parseInt(document.querySelector('input[name = "Question 9.6"]:checked').value);
+ var val7 = parseInt(document.querySelector('input[name = "Question 9.7"]:checked').value);
+ var val8 = parseInt(document.querySelector('input[name = "Question 9.8"]:checked').value);
+ var val9 = parseInt(document.querySelector('input[name = "Question 9.9"]:checked').value);
 
- var ansD = document.getElementById("score");
+ var ans9 = document.getElementById("PHQ-9-score");
 
-    ansD.value = val1 + val2 + val3 + val4 + val5 + val6 + val7 + val8 + val9;
+    ans9.value = val1 + val2 + val3 + val4 + val5 + val6 + val7 + val8 + val9;
+}
+
+function findScorePHQ4() {
+ var val1 = parseInt(document.querySelector('input[name = "Question 4.1"]:checked').value);
+ var val2 = parseInt(document.querySelector('input[name = "Question 4.2"]:checked').value);
+ var val3 = parseInt(document.querySelector('input[name = "Question 4.3"]:checked').value);
+ var val4 = parseInt(document.querySelector('input[name = "Question 4.4"]:checked').value);
+
+
+ var ans4 = document.getElementById("PHQ-4-score");
+
+    ans4.value = val1 + val2 + val3 + val4;
+}
+
+function calculateScores() {
+  findScorePHQ9();
+  findScorePHQ4();
 }
 
 </script>
@@ -63,69 +81,116 @@ function findScore() {
   </tr>
   <tr>
     <td>1. Little interest or pleasure in doing things</td>
-    <td><input type="radio" name="Question 1" value="0"><br></td>
-    <td><input type="radio" name="Question 1" value="1"><br></td>
-    <td><input type="radio" name="Question 1" value="2"><br></td>
-    <td><input type="radio" name="Question 1" value="3"><br></td>
+    <td><input type="radio" name="Question 9.1" value="0"><br></td>
+    <td><input type="radio" name="Question 9.1" value="1"><br></td>
+    <td><input type="radio" name="Question 9.1" value="2"><br></td>
+    <td><input type="radio" name="Question 9.1" value="3"><br></td>
   </tr>
   <tr>
     <td>2. Feeling down, depressed or hopeless</td>
-    <td><input type="radio" name="Question 2" value="0"><br></td>
-    <td><input type="radio" name="Question 2" value="1"><br></td>
-    <td><input type="radio" name="Question 2" value="2"><br></td>
-    <td><input type="radio" name="Question 2" value="3"><br></td>
+    <td><input type="radio" name="Question 9.2" value="0"><br></td>
+    <td><input type="radio" name="Question 9.2" value="1"><br></td>
+    <td><input type="radio" name="Question 9.2" value="2"><br></td>
+    <td><input type="radio" name="Question 9.2" value="3"><br></td>
   </tr>
   <tr>
     <td>3. Trouble falling asleep, staying asleep, or sleeping too much</td>
-    <td><input type="radio" name="Question 3" value="0"><br></td>
-    <td><input type="radio" name="Question 3" value="1"><br></td>
-    <td><input type="radio" name="Question 3" value="2"><br></td>
-    <td><input type="radio" name="Question 3" value="3"><br></td>  </tr>
+    <td><input type="radio" name="Question 9.3" value="0"><br></td>
+    <td><input type="radio" name="Question 9.3" value="1"><br></td>
+    <td><input type="radio" name="Question 9.3" value="2"><br></td>
+    <td><input type="radio" name="Question 9.3" value="3"><br></td>  </tr>
   <tr>
     <td>4. Feeling tired or having little energy</td>
-    <td><input type="radio" name="Question 4" value="0"><br></td>
-    <td><input type="radio" name="Question 4" value="1"><br></td>
-    <td><input type="radio" name="Question 4" value="2"><br></td>
-    <td><input type="radio" name="Question 4" value="3"><br></td>  </tr>
+    <td><input type="radio" name="Question 9.4" value="0"><br></td>
+    <td><input type="radio" name="Question 9.4" value="1"><br></td>
+    <td><input type="radio" name="Question 9.4" value="2"><br></td>
+    <td><input type="radio" name="Question 9.4" value="3"><br></td>  </tr>
   <tr>
     <td>5. Poor appetite or overeating</td>
-    <td><input type="radio" name="Question 5" value="0"><br></td>
-    <td><input type="radio" name="Question 5" value="1"><br></td>
-    <td><input type="radio" name="Question 5" value="2"><br></td>
-    <td><input type="radio" name="Question 5" value="3"><br></td>  </tr>
+    <td><input type="radio" name="Question 9.5" value="0"><br></td>
+    <td><input type="radio" name="Question 9.5" value="1"><br></td>
+    <td><input type="radio" name="Question 9.5" value="2"><br></td>
+    <td><input type="radio" name="Question 9.5" value="3"><br></td>  </tr>
   <tr>
     <td>6. Feeling bad about yourself - or that you’re a failure or have let yourself or your family down</td>
-    <td><input type="radio" name="Question 6" value="0"><br></td>
-    <td><input type="radio" name="Question 6" value="1"><br></td>
-    <td><input type="radio" name="Question 6" value="2"><br></td>
-    <td><input type="radio" name="Question 6" value="3"><br></td>  </tr>
+    <td><input type="radio" name="Question 9.6" value="0"><br></td>
+    <td><input type="radio" name="Question 9.6" value="1"><br></td>
+    <td><input type="radio" name="Question 9.6" value="2"><br></td>
+    <td><input type="radio" name="Question 9.6" value="3"><br></td>  </tr>
   <tr>
     <td>7. Trouble concentrating on things, such as reading the newspaper or watching television</td>
-    <td><input type="radio" name="Question 7" value="0"><br></td>
-    <td><input type="radio" name="Question 7" value="1"><br></td>
-    <td><input type="radio" name="Question 7" value="2"><br></td>
-    <td><input type="radio" name="Question 7" value="3"><br></td>  </tr>
+    <td><input type="radio" name="Question 9.7" value="0"><br></td>
+    <td><input type="radio" name="Question 9.7" value="1"><br></td>
+    <td><input type="radio" name="Question 9.7" value="2"><br></td>
+    <td><input type="radio" name="Question 9.7" value="3"><br></td>  </tr>
   <tr>
     <td>8. Moving or speaking so slowly that other people could have noticed. Or, the opposite - being so fidgety or restless that you have been moving around a lot more than usual</td>
-    <td><input type="radio" name="Question 8" value="0"><br></td>
-    <td><input type="radio" name="Question 8" value="1"><br></td>
-    <td><input type="radio" name="Question 8" value="2"><br></td>
-    <td><input type="radio" name="Question 8" value="3"><br></td>  </tr>
+    <td><input type="radio" name="Question 9.8" value="0"><br></td>
+    <td><input type="radio" name="Question 9.8" value="1"><br></td>
+    <td><input type="radio" name="Question 9.8" value="2"><br></td>
+    <td><input type="radio" name="Question 9.8" value="3"><br></td>  </tr>
   <tr>
     <td>9. Thoughts that you would be better off dead or of hurting yourself in some way</td>
-    <td><input type="radio" name="Question 9" value="0"><br></td>
-    <td><input type="radio" name="Question 9" value="1"><br></td>
-    <td><input type="radio" name="Question 9" value="2"><br></td>
-    <td><input type="radio" name="Question 9" value="3"><br></td>  </tr>
+    <td><input type="radio" name="Question 9.9" value="0"><br></td>
+    <td><input type="radio" name="Question 9.9" value="1"><br></td>
+    <td><input type="radio" name="Question 9.9" value="2"><br></td>
+    <td><input type="radio" name="Question 9.9" value="3"><br></td>  </tr>
+</table>
+
+<h2>PHQ-4</h2>
+
+<table>
+
+<col width="500">
+ <col width="80">
+ <col width="80">
+ <col width="100">
+ <col width="80">
+  <tr>
+    <th>Over the last 2 weeks, how often have you been bothered by the following problems?</th>
+    <th>Not At All</th>
+    <th>Several Days</th>
+<th>More Than Half The Days</th>
+<th>Nearly Every Day</th>
+  </tr>
+  <tr>
+    <td>1.Feeling nervous, anxious or on edge</td>
+    <td><input type="radio" name="Question 4.1" value="0"><br></td>
+    <td><input type="radio" name="Question 4.1" value="1"><br></td>
+    <td><input type="radio" name="Question 4.1" value="2"><br></td>
+    <td><input type="radio" name="Question 4.1" value="3"><br></td>
+  </tr>
+  <tr>
+    <td>2. Not being able to stop or control worrying</td>
+    <td><input type="radio" name="Question 4.2" value="0"><br></td>
+    <td><input type="radio" name="Question 4.2" value="1"><br></td>
+    <td><input type="radio" name="Question 4.2" value="2"><br></td>
+    <td><input type="radio" name="Question 4.2" value="3"><br></td>
+  </tr>
+  <tr>
+    <td>3.Little interest or pleasure in doing things</td>
+    <td><input type="radio" name="Question 4.3" value="0"><br></td>
+    <td><input type="radio" name="Question 4.3" value="1"><br></td>
+    <td><input type="radio" name="Question 4.3" value="2"><br></td>
+    <td><input type="radio" name="Question 4.3" value="3"><br></td>  </tr>
+  <tr>
+    <td>4.Feeling down, depressed, or hopeless</td>
+    <td><input type="radio" name="Question 4.4" value="0"><br></td>
+    <td><input type="radio" name="Question 4.4" value="1"><br></td>
+    <td><input type="radio" name="Question 4.4" value="2"><br></td>
+    <td><input type="radio" name="Question 4.4" value="3"><br></td>  </tr>
+
 </table>
 
 <p></p>
 Enter name: <input type="text" name="name" />
 <p></p>
-Score  = <input type="text" id="score" name="score" value=""/>
+PHQ-9 Score  = <input type="text" id="PHQ-9-score" name="PHQ-9-score" value=""/>
+<p></p>
+PHQ-4 Score = <input type="text" id="PHQ-4-score" name="PHQ-4-score" value=""/>
 <p></p>
 
-<input type="button" name="Calculate Score" value="Calculate Score" onclick="javascript:findScore()"/>
+<input type="button" name="Calculate Score" value="Calculate Score" onclick="javascript:calculateScores()"/>
 
 <input type="submit" value="Submit">
 <input type="reset" value="Reset Form">
